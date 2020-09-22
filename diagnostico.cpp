@@ -57,6 +57,16 @@ void capturar_personajes(){
 	}
 }
 
+void mostrar_personajes(){
+	int i;
+	for(i = 0; i < cont; i++){
+		printf("Nombre: %s\n", personajes[i].nombre);
+		printf("Tipo: %s\n", personajes[i].tipo);
+		printf("Fuerza: %f\n", personajes[i].fuerza);
+		printf("Salud: %i\n", personajes[i].salud);
+	}
+}
+
 int main(){
 	
 	char op;
@@ -90,7 +100,7 @@ int main(){
 				break;
 			
 			case '4':
-				
+				mostrar_personajes();
 				break;	
 					
 			case '0':
