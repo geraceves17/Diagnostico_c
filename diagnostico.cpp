@@ -28,6 +28,35 @@ void mostrar(int n, char cadena[]){
 	}
 }
 
+struct personaje{
+	char nombre[20];
+	char tipo[20];
+	float fuerza;
+	int salud;
+}personajes[5];
+
+unsigned int cont=0;
+
+void capturar_personajes(){
+	if(cont < 5){
+	
+		printf("Nombre: ");
+		scanf("%s", personajes[cont].nombre);
+		printf("Tipo: ");
+		scanf("%s", personajes[cont].tipo);
+		fflush(stdin);
+		printf("Fuerza: ");
+		scanf("f", personajes[cont].fuerza);
+		fflush(stdin);
+		printf("Salud: ");
+		scanf("%i", &personajes[cont].salud);
+		cont++;
+	}
+	else{
+		printf("\nEl arreglo de personajes esta lleno\n");
+	}
+}
+
 int main(){
 	
 	char op;
@@ -57,7 +86,7 @@ int main(){
 				break;
 			
 			case '3':
-				
+				capturar_personajes();
 				break;
 			
 			case '4':
